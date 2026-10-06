@@ -5,7 +5,15 @@ input--------------> agent (LLM) -----------> output
 
 Multi- agent research assistant a fully autonomous AI system that thinks, searches, reads and writes on its own. Instead of a single AI answering your question from tools, we are deploying a team of specialized intelligent agents that collaborate together to produces a professional research report on any topic you give them. the search agent goes live on the internet and find the most relavant and rect sources. The reader agent then dive into those sources, scraping and extracting meanningful content. The writer agent take all the gathered intelligence and crafts a well-structured, detailed report. And finally critic agent reviews the intire report, scores it and gives feedback just like a senior researcher reviewing ajunior's work. Every single agent is powered by LLM connected through Langchain's modern LCEL pipeline, and orchestration a shared memory syetem that makes them work as one unified brain.
 
-LCEL : langchain expression language
+LCEL : langchain expression language ----> one way data pipeline
+LCEL chain : sequence of runnable
+
+        Data input -----> [action (promp, chain, runnable)] here we apply LCEL ------> llms ------> output  (this high level design of generative AI)
+
+        chain : perform several action in a particular order
+
+        example : LCEL ----> chain = prompt | model | StrOutputParser()
+                    so here chain specify and give order that first execute or invoke prompt, then model, then StrOutputParser(). this order by using | (pipe) we call LCEL.
 
 ![alt text](<Screenshot 2026-09-29 at 2.53.15 AM.png>)
 

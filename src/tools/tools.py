@@ -16,7 +16,7 @@ tavily = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
 
 @tool
 def search_web(query :str) -> str :    ##  -> this sign show that this fuction return string
-        """ Search the web for recent and relaible information on a topic. Return title URL and"""
+        """ Search the web for recent and relaible information on a topic. Return title URL and snippets"""
 
         results = tavily.search(query=query, max_result=5)
 

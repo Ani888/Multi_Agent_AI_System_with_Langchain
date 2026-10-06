@@ -21,7 +21,7 @@ and then goes to critic chain and then generate final report
 
 Steps:
 
-1. Environment setup
+1. Environment setup and folder structure
 2. create tools
 3. create agents
 4. create pipeline
